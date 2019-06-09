@@ -1,0 +1,38 @@
+body{
+	/*background-color:#f8f8f8;*/
+	padding-top:80px;
+}
+
+
+nav .ab{
+	
+	padding-left:80px;
+	padding-bottom:10px;
+}
+nav .navs{
+	height:300px;
+}
+
+section .slide img{
+	padding-left:120px;
+}
+ 
+ 
+ section h4,h3{
+	 color:#1ba1e2;
+ }
+
+
+section .ban{
+	 background-color:#cccccc;
+}
+footer div .back{
+	background-color:red;
+}
+
+
+
+
+
+
+

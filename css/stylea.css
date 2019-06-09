@@ -1,0 +1,22 @@
+
+
+
+section .banner{
+	height:50px;
+	
+	
+	
+	background-color:#1ba1e2;
+}
+section h2{
+	padding:0 100px;;
+	text-shadow:1px 1px 0 #1681b4;
+     color:white;
+    font-size:20px;
+	font-weight:bold;
+}
+ section h4,h3{
+	 color:#1ba1e2;
+	 font-size:15px;
+ }
+ 

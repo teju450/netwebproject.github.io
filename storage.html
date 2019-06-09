@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+     <head>
+	 <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <title> website</title>
+	   <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+	   <link type="text/css" href="css/style.css" rel="stylesheet">
+	   <link href="css/jquery-ui.min.css" rel="stylesheet">
+       <link href="css/jquery.bxslider.css" rel="stylesheet"/>
+	    <script src="js/jquery.min.js"></script>
+	    <script src="js/jquery-ui.min.js"></script>
+      <script src="js/jquery.bxslider.js"></script>
+	  <script>
+	       $(document).ready(function() {
+		      $('#profile').tab('show');
+		   
+		   
+		   });
+	  </script>
+ </head>
+	 <body>
+	 <div class="container-fluid">
+	     <nav class="navbar navbar-default row nav nav-tabs navbar-fixed-top" style="height:80px;">
+     <!-- Brand and toggle get grouped for better mobile display -->
+	          <div class="col-xs-1"></div>
+			   <div class="col-xs-2" style="padding-top:10px;">
+			    <img src="img/netweb-logo.png" alt="logo" class="img-responsive"/>
+			  </div>
+			  <div class="navbar-header col-xs-8">
+			   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+          </button>
+      
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                 <ul class="nav navbar-nav test">
+	            <li><a href="index.html" style="color:#1ba1e2;">Home</a></li>
+                 <li><a href="about.html" style="color:#1ba1e2;">About Us</a></li>
+                  <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:#1ba1e2;">Products<span class="caret"></span></a>
+                   <ul class="dropdown-menu">
+               
+                     <li><a href="storage.html" >Storage</a></li>
+			 <li><a href="cluster.html">Cluster</a></li>
+			 <li><a href="mboard.html">Motherboards</a></li>
+			 <li><a href="chass.html">Chassis</a></li>
+              <li><a href="controller.html">RAID Controllers</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="speed.html">High Speed Interconnect</a></li>
+             </ul>
+        </li>
+		      <li><a href="solution.html" style="color:#1ba1e2;">Solutions</a></li>
+			    <li><a href="alliance.html" style="color:#1ba1e2;">Alliances</a></li>
+		        <li><a href=""></a></li> 
+				 <li><a href=""></a></li> 
+      </ul>
+     <form class="navbar-form navbar-left form-horizontal">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+		<!-- <span class="glyphicon glyphicon-search" aria-hidden="true"></span>-->
+		 <button type="button" class="btn btn-default" aria-label="Left Align">
+            <span class="glyphicon glyphicon-search" ></span>
+               </button>
+        </div>
+        
+      </form>
+	 
+
+    
+    </div><!-- /.navbar-collapse -->
+  </div>
+    <div class="col-xs-1" style="padding-top:10px;">
+	
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Login</button> 
+ 	</div>
+</nav>
+  <section class="row">
+   <div class="col-xs-1"></div>
+        <div class="col-xs-10">
+		
+		 <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Storage</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Opslag Fs2</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Storage Array</a></li>
+   
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane  active" id="home">
+	<h1 style="color:#1ba1e2;">Storage </h1>
+	<img src="img/storage_array.jpg"  class="img-responsive" style="padding-left:140px;"/>
+	 <h5><strong>+ iSCSI</strong></h5>
+           <p>Using familiar networking standards such as Ethernet and TCP/IP, iSCSI solutions are easy to install and maintain. Unlike FC, iSCSI solutions are not limited by distance; the use of IP networking for replication eliminates the limitation of distances while reducing cost of maintenance. The ability to easily integrate with existing IT infrastructure makes iSCSI solutions ideally suited for small and medium enterprises looking for simpler yet cost effective storage solutions. Tyrone offers a range of storage array solution using the iSCSI protocol. (Details of the D1-QIG series) 
+</p>
+      <h5><strong>+ 10GbE iSCSI</strong></h5>
+<p>iSCSI can scale upto 10 Gigabyte to provide performance in par with Metro and Wide Area Networks (WAN). 
+Tyrone offers 10GbE iSCSI storage solutions that are best suited for enterprises that require high transactional performance. 
+(Details of D1-QIT series)</p>
+<h5><strong>+ Fibre Channel</strong></h5>
+<p>Despite the growing popularity of Ethernet and Infiniband, Fibre Channels continue to hold fort especially for their ability to carry SCSI
+traffic. Fibre Channel arrays are widely used by several enterprises, often for department or application specific storage in the SAN mode. 
+Fibre Channel is ideally suited for small companies looking for reliable, high-speed connectivity combined with throughput and low latency features 
+at an affordable price. Tyrone offers a range of FC storage array solutions: (Details of D1-QF4 series)
+</p>
+<h5><b>+ SAS Solutions</b></h5>
+<p>Using the point-to-point serial protocol, Serial Attached SCCI (SAS) has been accepted by the industry as the logical 
+successor of the SCSI bus technology. SAS addresses the limitations of interface by combining the elements of SCSI with serialized transmission 
+of data. Apart from backward compatibility with parallel SCSI and SATA drives, SAS can also take advantage of a wide variety of RAID implementations. Tyrone offers flexible SAS solutions that provide improved performance, high availability, 
+and effective storage consolidation at lower costs. (Details of D1-Q36 series).</p>
+	</div>
+    <div role="tabpanel" class="tab-pane  fade " id="profile">
+	<h1 style="color:#1ba1e2;">Opslag Fs2</h1>
+	
+	<div class="col-xs-6">
+	  The era of having multiple units for different storage needs is passing as diverse storage products prevent optimum utilization and 
+	  can be difficult to manage. Opslag FS2 series from Tyrone Systems, consolidates all your storage requirements in a single all-in-one 
+	  storage solution which is the most flexible solution around. Apart from offering flexibility, it bundles enterprise class features such
+	  as extremely high scalability and redundancy along with a very high performance. It can serve the diverse requirements from high performance 
+	  computing to post-production and broadcast industry 
+     <h5><b>Flexible Scalability</b></h5>
+	 <p>Flexible data protection and redundancy Opslag FS2 is a highly scalable solution offering storage capacity starting from 8TB to well over 
+	 1 PetaByte. Storage capacity can be easily enhanced by adding JBOD units to primary storage. For customers requiring performance scaling along
+	 with capacity scaling, multiple FS2 units can be clustered together. </p>
+	
+	 <h5><b>Flexible data protection and redundancy</b></h5>
+		 <p>All Opslag FS2 solutions offer high level of redundant and data protection. All the systems support various RAID levels 
+		 (0, 1, 0+1, 5, 6, 50 & 60) for protection against disk failure and are bundled with redundant power supply as a default feature. 
+		 Opslag FS2 also supports multiple snapshots with scheduling as a default feature and supports local and remote replication.
+		 For customers looking for a highly-available system, 
+		 Opslag FS2 supports fail-over clustering.</p>
+		 <p>Since Opslag FS2 has been designed to be a flexible solution to cater to various requirements, it supports SSD caching
+		 for customers looking for extremely high IOPS. Our SSD caching algorithm is integrated at the hardware level and not at the 
+		 system level and therefore offers performance acceleration irrespective of whether
+		 you are using file or block access protocol.</p>
+		 </div>
+	<div class="col-xs-4">
+	<img src="img/FS2.jpg"  class="img-responsive" style="padding-left:90px;"/>
+	<img src="img/1s.jpg"  class="img-responsive"/><br>
+	 <p>It supports a variety of file and block protocols, supports a wide variety of client systems and many different configurations 
+	 for host connectivity
+</p>
+	</div>
+	
+	    
+	</div>
+    <div role="tabpanel" class="tab-pane  fade " id="messages">
+	<h1 style="color:#1ba1e2;">Storage Array</h1>
+	<table class="table table-hover  table-bordered">
+  
+     <tr>
+	   <th>Feature</th>
+	   <th>Benefit</th>
+	 </tr>
+	 <tr>
+	    <td>Green:</td>
+	
+		 
+		<td>Energy efficiency leading to lower TCO</td>
+		
+		 
+  </tr>
+  <tr>
+      <td> - Auto disk spin down </td>
+	  <td></td>
+  </tr>
+  <tr>
+     <td>  - Advanced cooling </td>
+	  <td></td>
+  </tr>
+  <tr>
+   <td>  - 80 + energy efficient power supply </td>
+    <td></td>
+  </tr>
+	
+	<tr>
+	  <td>Redundant RAID Controllers, battery backup</td>
+	  <td>High availability and advanced data protection</td>
+	</tr>
+	<tr>
+	<td>SAS JBOD expansion ports</td>
+	<td>Scalability</td>
+	</tr>
+	   
+<tr>
+	<td>Optimized IOPS and throughput</td>
+	<td>Suited for run-time-critical services such as cloud computing, exchange servers, and high-end surveillance storage</td>
+	</tr>
+	    
+<tr>
+	<td>Supports virtualization</td>
+	<td>Reduces total cost of ownership and capital spend</td>
+	</tr>
+	    <tr>
+	<td>Web GUI for management</td>
+	<td>Low learning curve and high visibility</td>
+	</tr>
+	    <tr>
+	<td>Redundant hot-plug power supply</td>
+	<td>No downtime to repair failure</td>
+	</tr>
+	    <tr>
+	<td>Field-upgradable firmware</td>
+	<td>Ability to remotely upgrade and continuously enjoy the latest features of the product</td>
+	</tr>
+	    		
+	
+  
+  
+  
+</table>
+	</div>
+    
+  </div>
+
+</div>
+ </div>
+	   <div class="col-xs-1"></div>
+  
+  
+  </section>
+  </br></br>
+<footer class="row panel panel-primary " style="background-color:#666;">
+		        <div class="col-xs-1"></div>
+			     <div class="col-xs-3">
+				    <h4 style="color:white;">HEAD OFFICE</h4>
+					<address>
+						<b>B-1/A25, 2nd Floor,
+                           Mohan Co-Operative Industrial Estate,<br>
+						   Mathura Road, New Delhi – 110 044</b></br></br>
+						   Telefax +91-11-43240000
+                           Email <a href="#">info@netwebindia.com</a>
+					</address>
+					
+				</div>
+				<div class="col-xs-3">
+					<h4 style="color:white;">CONNECT</h4>
+					<h5>Connect with Us</h5>
+					<ul>
+					  <li><a href="img/fb1.png" title="Facebook">
+					  <img src="img/fb1.png"/>
+					  <strong>Facebook</strong></a>
+					  </li>
+					  <br>
+					 <li> <a href="img/tl1.png" title="Twitter">
+					 <img src="img/tl1.png"/>
+					 <strong>Twitter</strong></a>
+					 </li>
+					</ul>
+					 <p>24/7 Toll Free <br>
+                       <a href="#"> Tel : 1800-419-0688.</a></p>
+				</div>
+				<div class="col-xs-2">
+					<h4 style="color:white;">QUICK LINKS</h4>
+					<ul>
+						<li><a href="#">Events</a></li>
+						<li><a href="#">Press Release</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+				
+				<div class="col-xs-1"></div>
+			
+			  </footer>
+</div>
+    <script src="js/bootstrap.min.js"></script>  
+	    <script src="js/script1.js"></script>
+</body>
+</html>
+

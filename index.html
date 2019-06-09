@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+     <head>
+	 <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <title> website</title>
+	   <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+	   <link type="text/css" href="css/style.css" rel="stylesheet">
+	   <link href="css/jquery-ui.min.css" rel="stylesheet">
+       <link href="css/jquery.bxslider.css" rel="stylesheet"/>
+	    <script src="js/jquery.min.js"></script>
+	    <script src="js/jquery-ui.min.js"></script>
+      <script src="js/jquery.bxslider.js"></script>
+	 
+	 
+	  <script>
+	      $(document).ready(function(){
+		    $('#ldajax').click(function(){
+			  $.ajax({
+			     url:'hpc.html',
+				 success:function(response){
+				  $('.jscont').html(response);
+				 },
+				 error:function(){
+				 $('.jscont').html('something went wrong');
+				 }
+			  });
+			});
+			 $('#bdajax').click(function(){
+			  $.ajax({
+			     url:'st.html',
+				 success:function(response){
+				  $('.scont').html(response);
+				 },
+				 error:function(){
+				 $('.jscont').html('something went wrong');
+				 }
+			  });
+			});
+			
+			 $('#adajax').click(function(){
+			  $.ajax({
+			     url:'cloud.html',
+				 success:function(response){
+				  $('.jcont').html(response);
+				 },
+				 error:function(){
+				 $('.jscont').html('something went wrong');
+				 }
+			  });
+			});
+		        
+			  
+		  
+		  });
+	  
+	  </script>
+	   
+	 </head>
+	 <body>
+	 <div class="container-fluid">
+	     <nav class="navbar navbar-default row nav nav-tabs navbar-fixed-top navbar-expand-md" style="height:80px;">
+     <!-- Brand and toggle get grouped for better mobile display -->
+	          <div class="col-xs-1"></div>
+			   <div class="col-xs-2" style="padding-top:10px;">
+			    <img src="img/netweb-logo.png" alt="logo" class="img-responsive"/>
+			  </div>
+			  <div class="navbar-header col-xs-8">
+			   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+          </button>
+      
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                 <ul class="nav navbar-nav test">
+	            <li><a href="index.html" style="color:#1ba1e2;">Home</a></li>
+                 <li><a href="about.html" style="color:#1ba1e2;">About Us</a></li>
+                  <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:#1ba1e2;">Products<span class="caret"></span></a>
+                   <ul class="dropdown-menu">
+               
+                     <li><a href="storage.html" >Storage</a></li>
+			 <li><a href="cluster.html">Cluster</a></li>
+			 <li><a href="mboard.html">Motherboards</a></li>
+			 <li><a href="chass.html">Chassis</a></li>
+              <li><a href="controller.html">RAID Controllers</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="speed.html">High Speed Interconnect</a></li>
+             </ul>
+        </li>
+		      <li><a href="solution.html" style="color:#1ba1e2;">Solutions</a></li>
+			    <li><a href="alliance.html" style="color:#1ba1e2;">Alliances</a></li>
+		        <li><a href=""></a></li> 
+				 <li><a href=""></a></li> 
+      </ul>
+     <form class="navbar-form navbar-left form-horizontal">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+		<!-- <span class="glyphicon glyphicon-search" aria-hidden="true"></span>-->
+		 <button type="button" class="btn btn-default" aria-label="Left Align">
+            <span class="glyphicon glyphicon-search" ></span>
+               </button>
+        </div>
+        
+      </form>
+	 
+
+    
+    </div><!-- /.navbar-collapse -->
+  </div>
+    <div class="col-xs-1" style="padding-top:10px;">
+	
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Login</button> 
+ 	</div>
+</nav>
+  <section>
+    <div class="col-xs-12">
+	    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">User Login</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="username-name" class="control-label">Username:</label>
+            <input type="text" class="form-control" id="username-name">
+          </div>
+          <div class="form-group">
+            <label for="password" class="control-label">Password:</label>
+            <input type="password" class="form-control" id="password">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <input type="reset" class="btn btn-primary" value="reset" name="reset"/>
+        <button type="submit" class="btn btn-primary" name="login">login</button>
+      </div>
+    </div>
+  </div>
+</div>	
+
+	</div>
+  
+  </section>
+
+ 
+		  
+		 <section class="row">
+		         <div class="col-xs-1"></div>
+		      <div class="col-xs-10">
+			  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                      <!-- Indicators -->
+                              <ol class="carousel-indicators">
+                              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+							   <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+							    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                              </ol>
+
+                             <!-- Wrapper for slides -->
+                            <div class="carousel-inner slide" role="listbox">
+                          <div class="item active">
+                             <img src="img/1.jpg" alt="logo" class="img-responsive">
+                          <div class="carousel-caption">
+                              </div>
+                       </div>
+                             <div class="item">
+                              <img src="img/2.jpg" alt="logo" class="img-responsive">
+                          <div class="carousel-caption">
+                               </div>
+                            </div>
+                         <div class="item">
+                              <img src="img/3.jpg" alt="logo" class="img-responsive">
+                          <div class="carousel-caption">
+                               </div>
+                            </div>
+							 <div class="item">
+                              <img src="img/4.jpg" alt="logo" class="img-responsive">
+                          <div class="carousel-caption">
+                               </div>
+                            </div>
+							 <div class="item">
+                              <img src="img/5.jpg" alt="logo" class="img-responsive">
+                          <div class="carousel-caption">
+                               </div>
+                            </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+				 
+			  </div>
+		 <div class="col-xs-1"></div>	   
+</section>
+<section class="row">
+		        <div class="col-xs-1"></div>
+				<div class="col-xs-10">
+				     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title" style="color:#1ba1e2;">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Storage
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+	        <h5><strong>+ iSCSI</strong></h5>
+           <p>Using familiar networking standards such as Ethernet and TCP/IP, iSCSI solutions are easy to install and maintain. Unlike FC, iSCSI solutions are not limited by distance; the use of IP networking for replication eliminates the limitation of distances while reducing cost of maintenance. The ability to easily integrate with existing IT infrastructure makes iSCSI solutions ideally suited for small and medium enterprises looking for simpler yet cost effective storage solutions. Tyrone offers a range of storage array solution using the iSCSI protocol. (Details of the D1-QIG series) 
+</p>
+      <h5><strong>+ 10GbE iSCSI</strong></h5>
+<p>iSCSI can scale upto 10 Gigabyte to provide performance in par with Metro and Wide Area Networks (WAN). 
+Tyrone offers 10GbE iSCSI storage solutions that are best suited for enterprises that require high transactional performance. 
+(Details of D1-QIT series)</p>
+<h5><strong>+ Fibre Channel</strong></h5>
+<p>Despite the growing popularity of Ethernet and Infiniband, Fibre Channels continue to hold fort especially for their ability to carry SCSI
+traffic. Fibre Channel arrays are widely used by several enterprises, often for department or application specific storage in the SAN mode. 
+Fibre Channel is ideally suited for small companies looking for reliable, high-speed connectivity combined with throughput and low latency features 
+at an affordable price. Tyrone offers a range of FC storage array solutions: (Details of D1-QF4 series)
+</p>
+
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title" style="color:#1ba1e2;">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Cluster
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+         <h5><b> Moab Cluster Suite®</b></h5>
+		 <p>Moab Cluster Suite is a policy-based intelligence engine that integrates scheduling, managing, monitoring and reporting 
+		 of cluster workloads. It guarantees service levels are met while maximizing job throughput. Moab integrates with existing middleware for consolidated administrative control and holistic cluster reporting. Its graphical management interfaces and flexible policy capabilities result in decreased costs 
+		 and increased ROI.</p>
+		 <h5><b> Moab Adaptive HPC Suite™   </b></h5>
+		 <p>Moab Adaptive HPC Suite changes a node’s operating system on the fly in response to workload needs. As an intelligent metascheduler, Moab determines when the OS mix should be modified for optimal efficiency, based on defined policies and service-level agreements and on current and projected workload. When specified conditions are met, Moab automatically triggers the OS change using a site’s preferred OS-modification technology, such as dual boot, diskful, or stateless (diskfree) provisioning, or virtualization 
+		 (using Hyper-V within Windows HPC Server 2008, VMware, or XenWare).</p>
+		 <h5><b> Moab Utility /Hosting Suite ™</b></h5>
+		 <p>Moab Utility/Hosting Suite allows organizations to dynamically generate whole compute environments–including compute, service, 
+		 node, network, storage and license resources–to meet changing workload levels, cluster health and resource failures. Moab creates a 
+		 virtualized pool of all resources and then activates disk-full, diskless, and virtual provisioning technologies to adapt the resources based
+		 on workload and specific user or group needs. It fully automates resource allocation by matching workload to the optimal set of resources. 
+		 Moab also provides advance reservations and ensures that Quality 
+		 of Service and SLA guarantees are always met for both internal and external customers.</p>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title" style="color:#1ba1e2;">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Motherboards
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+       <h5><b>Accelerated Deployment, Support and Service Worldwide</b></h5>
+	    <img src="img/cloud.jpg" alt="logo" class="img-responsive"/>
+		<p>Supermicro's Global SKU Program offers streamlined fulfillment and support services for our premier lines of advanced server,
+		storage and networking solutions for Data Center, Cloud Computing, Enterprise IT, Hadoop/Big Data, HPC and Embedded applications. As the one-stop-shop for all customer system building needs, Supermicro is committed to providing maximum flexibility to design and deploy highly-efficient, high-performance computing solutions for any scale customer requirement 
+		to any location around the globe.</p>
+      </div>
+    </div>
+  </div>
+</div>  
+				
+				</div>
+				 <div class="col-xs-1"></div>
+		  </section>
+
+		 <section class="row">
+		          
+			    <div class="col-xs-1"></div>
+			     <div class="col-xs-3 col-sm-3 col-md-3">
+				    <div class="thumbnail">
+                      <img src="img/1.png" alt="logo" width="80px" height="90px" class="img-responsive">
+                       <div class="caption">
+                        <h4>High Performance Computing</h4>
+                         <p>Hundreds of installation and a deducted HPC team with thousands of Hours of expertise in various domains.</p>
+                          <!--<p class="readmore"><a href="#" target="_blank" title="read on">read more</a> </p>-->
+						  <button type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal">read more</button>
+					</div>
+</div>					
+         </div>
+				
+				     <div class="col-xs-3 col-sm-3 col-md-3">
+					  <div class="thumbnail">
+                     <img src="img/3.png" alt="logo"  width="80px" height="90px" class="img-responsive">
+                       <div class="caption">
+                        <h4>Cloud Solutions</h4>
+                       <p>Tyrone Edra on Demand is one of the few dedicated HPC on cloud solution for flexible usage of HPC on cloud</p>
+                       <!--<p class="readmore"><a href="#" target="_blank" title="read on">read more</a> </p>-->
+					   <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">read more</button>
+						   <div class="jcont"></div>
+                    </div>
+               </div>
+		</div>
+					   <div class="col-xs-3 col-sm-3 col-md-3">
+					    <div class="thumbnail">
+                           <img src="img/4.png" alt="logo"  width="80px" height="90px" class="img-responsive">
+                              <div class="caption">
+                                <h4>Storage solution</h4>
+                                  <p>Most unified, flexible and scalable solution available. With SAN NAS and VTL now all in one</p>
+                              <!-- <p class="readmore"><a href="#" target="_blank" title="read on">read more</a> </p>-->
+							   <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">read more</button>
+						   <div class="scont"></div>
+                           </div>
+                          </div>
+					  
+					 </div>
+					     <div class="col-xs-2">
+						 
+						 <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">High Performance Computing</h4>
+      </div>
+      <div class="modal-body">
+         <p>Netweb's HPCC solutions are built using leading industry-standard building blocks and best-in-class partner products. The result is a highly scalable HPCC solution that can deliver exceptional performance and manageability at a fraction of the cost of competing solutions. We offer a wide choice of systems and interconnects allowing you to choose the best solution for your requirements. Our systems range from single socket to quad-socket and in various form-factors including the revolutionary Twin1U which packs two 
+		 servers inside a single 1U chassis to deliver unparalleled density. This 0.5U density (84 server nodes in a standard 42U rack) combined with optional onboard InfiniBand or 10GbE makes these platforms an excellent choice for high-performance computing (HPC) clusters where space, cost, energy-efficiency and density are high priorities.
+Our 10-blade server system based on the SBI-7125C-T3 blade is an extremely cost-effective supercomputer. 
+This solution now provides the scientific community the opportunity to enable a personal supercomputer 
+next to their desks with the same computing power previously only available via large server installations in a dedicated IT room.
+ This optimized blade solution features 93% power supply efficiency, innovative and highly efficient thermal and cooling system designs, 
+ and industry-leading system performance-per-watt (300+ GFLOPS/kW), making it the greenest, most power-saving blade solution.</p> 
+   <h4 class="modal-title" id="myModalLabel">Large Memory SMP systems</h4>
+    <p>HPC applications have always needed faster and larger systems, historically served by SMP systems. The dominance of SMP was 
+	due to the ease of deployment, management and programming. However, these fully proprietary systems were expensive as they used 
+	custom processors, custom chipsets and ASICs to create high-speed backplanes as well as custom Operating Systems (OS).SMP systems 
+	require significant investment in system-level architecture by computer manufacturers as well as substantial amount of development time.
+	The result of the high R&D investment is an expensive solution that uses proprietary technology based on custom hardware and components. To 
+	date, most of the SMP systems with 8 processors or more utilize non-x86 processors, which is a large contributor to the high price of SMP systems.
+	In addition to the high price, these systems generally "lock" the end customer into a specific computer manufacturer due to its proprietary 
+	hardware architecture and software stack. An alternative for large SMP systems was the adoption of commodity server clusters connected with 
+	high-speed interconnects. Cluster solutions deliver more performance than traditional SMPs, but are more difficult to program, implement and 
+	manage. It leads to higher OS deployment cost and complexity such as network boot or other centralized OS deployment techniques are required, 
+	resulting in a need for higher IT skill sets. Providing the application with access to common storage requires use of cluster file-system, 
+	SAN or NAS deployments. In addition to complexity, cluster deployment poses two challenges at the application level. i) Specific programming 
+	model is needed to accommodate the distributed nature of the computing resource ii) Each processor can access only the "cluster" node's local 
+	memory, which is usually limited. Netweb delivers a software-based computing-architecture that combines the advantages of shared-memory 
+	systems and the price points of commodity clusters by leveraging off-the-shelf x86 components. </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+						 
+						 </div>
+		 </section>
+		  
+		  <section class="row">
+		   <div class="col-xs-1">
+		   </div>
+		    <div class="col-xs-6">
+			 <p>In today’s world Customer Centric Solutions are of paramount importance and we at Netweb Technologies work towards offering the latest technology based solutions to increase the return on investments. We at Netweb Technologies, have a clear focus, and we deal in only certain specific products which enables us to specialize and provide best solutions and services. 
+			 We have extremely strong business relationships with the technology leaders who are known the world over for their specific product range.</p>
+			  <h4>Our products/services</h4>
+			   <ul>
+			      <li>Servers based on x86 processor family</li>
+				  <li>Workstations</li>
+				  <li>Storage solutions (NAS & iSCSI)</li>
+				  <li>RAID controllers</li>
+				  <li>Infiniband products</li>
+				  <li>Compilers</li>
+				  <li>Cluster solutions (HPCC, HA & Visualization)</li>
+			   </ul>
+			    <h4>Our Experience</h4>
+				<p>We owe our success to our customers who had made us reach the heights" and should instead read as
+				"We owe our success to our customers who have made us reach new heights.</p>
+			</div>
+			    <div class="col-xs-5 col-md-5 col-sm-3 col-lg-5">
+			     <form onsubmit="return validate()">
+		
+			     <h3><span>QUICK CONTACT</span></h3>
+				 <p id="disp_error"></p>
+				 <input type="text" placeholder="Name..." name="uname" id="name_error"/>
+				 <br><br>
+				 <input type="email" placeholder="Email..." name="email" id="email_error"/>
+				  <br><br>
+				 
+				 <input type="text" placeholder="Subject..." name="subject" id="sub_error"/>
+				 <br><br>
+				 <textarea placeholder="Message..." name="text"  id="text_error" ></textarea>
+				 <br><br>
+				 <input type="submit" class="btn btn-primary" value="Login" name="login"/>
+				 
+				 </form>
+			</div>
+		  </section> 
+		  
+		   
+		<footer class="row panel panel-primary " style="background-color:#666;">
+		        <div class="col-xs-1 col-md-1"></div>
+			     <div class="col-xs-3 col-md-3">
+				    <h4 style="color:white;">HEAD OFFICE</h4>
+					<address>
+						<b>B-1/A25, 2nd Floor,
+                           Mohan Co-Operative Industrial Estate,<br>
+						   Mathura Road, New Delhi – 110 044</b></br></br>
+						   Telefax +91-11-43240000
+                           Email <a href="#">info@netwebindia.com</a>
+					</address>
+					
+				</div>
+				<div class="col-xs-3 col-md-3">
+					<h4 style="color:white;">CONNECT</h4>
+					<h5>Connect with Us</h5>
+					<ul>
+					  <li><a href="img/fb1.png" title="Facebook">
+					  <img src="img/fb1.png"/>
+					  <strong>Facebook</strong></a>
+					  </li>
+					  <br>
+					 <li> <a href="img/tl1.png" title="Twitter">
+					 <img src="img/tl1.png"/>
+					 <strong>Twitter</strong></a>
+					 </li>
+					</ul>
+					 <p>24/7 Toll Free </br>
+                       <a href="#"> Tel : 1800-419-0688.</a></p>
+				</div>
+				<div class="col-xs-2 col-md-2">
+					<h4 style="color:white;">QUICK LINKS</h4>
+					<ul>
+						<li><a href="#">Events</a></li>
+						<li><a href="#">Press Release</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+				
+				<div class="col-xs-1"></div>
+			
+			  </footer>
+	 </div>
+	   <script src="js/bootstrap.min.js"></script>  
+	    <script src="js/script1.js"></script>
+	 </body>
+	 </html>
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 

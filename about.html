@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+     <head>
+	 <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <title> website</title>
+	 <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+	 <link type="text/css" href="css/stylea.css" rel="stylesheet">
+	  <script src="js/jquery.min.js"></script>
+	  
+	    <script>
+	        $(document).ready(function() {
+	           $('#error').click(function(){
+		         var username=$('#uname').attr('type');
+			      var email=$('#email').attr('type');
+			      var password= $('#pwd').attr('type');
+			      var subject=$('#sub').attr('type');
+			     var textarea=$('#msg').attr('type');
+			     var file=$('#file').attr('type');
+			      var checkbox=$('#check').attr('type');
+			  if(username == ''|| email == ''|| password == ''|| subject == ''|| textarea == ''|| file == ''||checkbox == '')
+			  {
+			    
+				$('#sh').html('please enter your all details');
+			 
+			   } 
+			});
+	        
+	 });
+	 
+	 
+	 </script>
+	     
+	 </head>
+	 <body>
+	 <div class="container-fluid">
+	     <nav class="navbar navbar-default row nav nav-tabs " style="height:80px;">
+     <!-- Brand and toggle get grouped for better mobile display -->
+	          <div class="col-xs-1"></div>
+			   <div class="col-xs-2 ab" style="padding-top:10px;">
+			    <img src="img/netweb-logo.png" alt="logo" class="img-responsive"/>
+			  </div>
+			  <div class="navbar-header col-xs-8">
+			    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+         <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+          </button>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                 <ul class="nav navbar-nav">
+	            <li><a href="index.html" style="color:#1ba1e2;">Home</a></li>
+                 <li><a href="about.html" style="color:#1ba1e2;">About Us</a></li>
+                  <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:#1ba1e2;">Products<span class="caret"></span></a>
+                   <ul class="dropdown-menu">
+                  
+                    
+                     <li><a href="storage.html">Storage</a></li>
+			 <li><a href="cluster.html">Cluster</a></li>
+			 <li><a href="mboard.html">Motherboards</a></li>
+			 <li><a href="chass.html">Chassis</a></li>
+              <li><a href="controller.html">RAID Controllers</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="speed.html">High Speed Interconnect</a></li>
+             </ul>
+        </li>
+		      <li><a href="solution.html" style="color:#1ba1e2;">Solutions</a></li>
+			  <li><a href="alliance.html" style="color:#1ba1e2;">Alliances</a></li>
+		        
+      </ul>
+     <form class="navbar-form navbar-left form-horizontal">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+		
+		 <button type="button" class="btn btn-default" aria-label="Left Align">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+               </button>
+        
+      </form>
+	  
+    
+    </div><!-- /.navbar-collapse -->
+  </div>
+       <div class="col-xs-1"></div>
+</nav>
+          <section class="row">
+		  <div class="col-xs-12 col-md-12 col-sm-12 banner">
+		     <h2>COMPANY PROFILE</h2>
+			 
+		  </div>
+
+         </section>
+<br><br>
+ <section class="row">
+		   <div class="col-xs-1">
+		   </div>
+		   
+		    <div class="col-xs-6">
+			 <p>In today’s world Customer Centric Solutions are of paramount importance and we at Netweb Technologies work towards offering the latest technology based solutions to increase the return on investments. We at Netweb Technologies, have a clear focus, and we deal in only certain specific products which enables us to specialize and provide best solutions and services. 
+			 We have extremely strong business relationships with the technology leaders who are known the world over for their specific product range.</p>
+			  <h4>Our products/services</h4>
+			   <ul>
+			      <li>Servers based on x86 processor family</li>
+				  <li>Workstations</li>
+				  <li>Storage solutions (NAS & iSCSI)</li>
+				  <li>RAID controllers</li>
+				  <li>Infiniband products</li>
+				  <li>Compilers</li>
+				  <li>Cluster solutions (HPCC, HA & Visualization)</li>
+			   </ul>
+			    <h4>Our Experience</h4>
+				<p>We owe our success to our customers who had made us reach the heights" and should instead read as
+				"We owe our success to our customers who have made us reach new heights.</p>
+			</div>
+			<div class="col-xs-5">
+			     <h3><span>QUICK CONTACT</span></h3>
+				  <p id="error"></p>
+				 <form>
+					   <div class="form-group" style="width:70%;">
+                <label for="uname">Username:</label><br>
+               <input type="email" class="form-control" id="uname" placeholder="username">
+              </div>
+               <div class="form-group" style="width:70%;">
+                <label for="email">Email address:</label><br>
+               <input type="email" class="form-control" id="email" placeholder="Email">
+              </div>
+                  <div class="form-group" style="width:70%">
+                      <label for="pwd">Password:</label><br>
+                         <input type="password" class="form-control" id="pwd" placeholder="Password">
+              </div>
+	        <div class="form-group" style="width:70%">
+                <label for="sub">Subject:</label><br>
+               <input type="text" class="form-control" id="sub" placeholder="subject">
+              </div>
+			  <div class="form-group" style="width:70%;">
+                <label for="msg">Message:</label><br>
+                <textarea placeholder="Message..."class="form-control" id="msg"></textarea>
+              </div>
+			  
+			  
+              <div class="form-group" style="width:70%">
+                        <label for="file">Resume:</label>
+                        <input type="file" id="file">
+                     
+                         </div>
+                    <div class="checkbox">
+                      <label>
+                    <input type="checkbox" id="check"> Check me out
+                   </label>
+                 </div>
+                 <button type="submit" class="btn btn-primary" >Submit</button>
+              </form>
+			</div>
+		  </section> 
+		  <br><br>
+		  
+		  <section class="row">
+		      <div class="col-xs-6 col-md-6 col-sm-6 banner">
+		     <h2>KEY STRENGTH</h2>
+			 
+		  </div>
+		   <div class="col-xs-6 col-md-6 col-sm-6 banner">
+		     <h2>MILESTONES</h2>
+			 
+		  </div>
+		 
+		  </section>
+		  <section class="row">
+		  <div class="col-xs-1"></div>
+		  
+		  <div class="col-xs-5 col-md-5 col-sm-5 ">
+		     <ul>
+			    <li>Association with industry leaders. 
+				All the companies represented by us are acknowledged leaders in their respective area 
+				of business in terms of performance and reliability.</li>
+				<li>Clear Focus. A lot of companies believe in having their hands in virtually everything even remotely connected
+				to their area of operation. We, at Netweb Technologies have a clear focus and deal with Servers, Workstations and related products and technologies.</li>
+				<li>Customer-centric approach. For us the customer satisfaction is the primary aim. 
+				All other things come later. There have been times we have gone to great lengths to provide a satisfactory solution to our customers
+				without bothering about the time and cost implications.</li>
+			 </ul>
+			 
+		  </div>
+		  <div class="col-xs-5 col-md-5 col-sm-5 ">
+		    <ul>
+			  <li>First company to introduce Server products for the Intel® Xeon processor along with Supermicro.</li>
+			  <li>Associated with Kabru which is one of the largest academic clusters in India. It is a 288 processor HPCC solution with a performance of 1TFLOP. 
+			  It was ranked twice in the list of Top500 Super Computers worldwide.</li>
+			  <li>Associated with the first HPCC in India based on dual-core Intel® Xeon processor with 1333MHz FSB</li>
+			  <li>Associated with the first HPCC in India based on Pathscale HTX Infinipath adapter.</li>
+			</ul>
+		  </div>
+		   <div class="col-xs-1"></div>
+		  </section>
+		   
+		<footer class="row panel panel-primary " style="background-color:#666;">
+		        <div class="col-xs-1"></div>
+			     <div class="col-xs-3">
+				    <h4 style="color:white;">HEAD OFFICE</h4>
+					<address>
+						<b>B-1/A25, 2nd Floor,
+                           Mohan Co-Operative Industrial Estate,<br>
+						   Mathura Road, New Delhi – 110 044</b></br></br>
+						   Telefax +91-11-43240000
+                           Email <a href="#">info@netwebindia.com</a>
+					</address>
+					
+				</div>
+				<div class="col-xs-3">
+					<h4 style="color:white;">CONNECT</h4>
+					<h5>Connect with Us</h5>
+					<ul>
+					  <li><a href="img/fb1.png" title="Facebook">
+					  <img src="img/fb1.png"/>
+					  <strong>Facebook</strong></a>
+					  </li>
+					  <br>
+					 <li> <a href="img/tl1.png" title="Twitter">
+					 <img src="img/tl1.png"/>
+					 <strong>Twitter</strong></a>
+					 </li>
+					</ul>
+					 <p>24/7 Toll Free <br><a href="#">
+                        Tel : 1800-419-0688.</a></p>
+				</div>
+				<div class="col-xs-2">
+					<h4 style="color:white;">QUICK LINKS</h4>
+					<ul>
+						<li><a href="#">Events</a></li>
+						<li><a href="#">Press Release</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+				
+				<div class="col-xs-1"></div>
+			
+			  </footer>
+</div>
+ <script src="js/bootstrap.min.js"></script> 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
